@@ -31,6 +31,7 @@
     "type": "git",
     "url": "git@github.com:rsuite/rsuite-admin-template.git"
   },
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "@babel/runtime": "^7.18.9",
     "@faker-js/faker": "^7.4.0",
@@ -45,7 +46,6 @@
     "classnames": "^2.3.1",
     "date-fns": "^2.29.2",
     "feather-icons": "^4.29.0",
-    "formik": "^2.2.9",
     "lodash": "^4.17.21",
     "node-sass": "^8.0.0",
     "prop-types": "^15.6.0",

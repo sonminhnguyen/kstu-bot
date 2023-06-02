@@ -6,13 +6,10 @@ const mysql = require('mysql')
 
 const config = {
   development: {
-    client: 'mysql',
+    client: 'pq',
     connection: {
-      host : '127.0.0.1',
-      port : 3306,
-      user : 'root',
-      password : 'root',
-      database : 'vkchat'
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
     },
     migrations: {
       directory: './knex/migrations',
