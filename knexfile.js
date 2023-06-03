@@ -1,12 +1,12 @@
 // Update with your config settings.
 require('dotenv').config()
 const mysql = require('mysql')
-// const pg = require('pg');
+const pg = require('pg');
 // pg.defaults.ssl = true;
 
 const config = {
   development: {
-    client: 'pq',
+    client: 'pg',
     connection: {
       connectionString: process.env.DATABASE_URL,
       ssl: { rejectUnauthorized: false },
@@ -19,7 +19,7 @@ const config = {
     },
   },
   production: {
-    client: 'pq',
+    client: 'pg',
     connection: {
       connectionString: process.env.DATABASE_URL,
       ssl: { rejectUnauthorized: false },
