@@ -44,7 +44,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(sass|less|css)$/,
+        test: /\.(sass|less|css|css.map)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
