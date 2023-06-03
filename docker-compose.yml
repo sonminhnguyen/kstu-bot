@@ -1,0 +1,62 @@
+version: '3.8'
+services:
+  database:
+    image: "mysql/mysql-server:8.0"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_DATABASE=vkchat
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_ALLOW_EMPTY_PASSWORD=ok
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+  kstu-server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+    env_file: ./server/.env
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    environment:
+      - SQL_PORT=3306
+      - SQL_USER=root
+      - SQL_PASSWORD=root
+      - SQL_DATABASE=vkchat
+    network_mode: host
+  # kstu-client:
+  #   environment:
+  #     - WDS_SOCKET_PORT=0
+  #   build:
+  #     context: ./client
+  #     dockerfile: Dockerfile.dev
+  #   volumes:
+  #     - /app/node_modules
+  #     - ./client:/app
+  #   restart: always
+  #   ports:
+  #     - "3100:3100"
+  #   expose:
+  #     - "3100"
+  #   depends_on:
+  #     - database
+  #   network_mode: host
+  # nginx:
+  #   depends_on:
+  #     - kstu-server
+  #     - kstu-client
+  #   restart: always
+  #   build:
+  #     dockerfile: Dockerfile.dev
+  #     context: ./nginx
+  #   ports:
+  #     - "3050:80"
