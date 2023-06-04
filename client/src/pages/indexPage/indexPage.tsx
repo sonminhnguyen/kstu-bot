@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 const IndexPage = () => {
   return (
     <Fragment>
@@ -18,20 +20,20 @@ const IndexPage = () => {
                 <div className="logo-holder"></div>
                 <ul className="clearfix">
                   <li>
-                    <a href="#about">Про КНИТУ</a>
+                    <HashLink to="#about">Про КНИТУ</HashLink>
                   </li>
                   <li className="dot">.</li>
                   <li>
-                    <a href="#contact" className="r_spacer">
+                    <HashLink to="#contact" className="r_spacer">
                       Контакт
-                    </a>
+                    </HashLink>
                   </li>
                   <li>
-                    <a href="#work">Деятельность</a>
+                    <HashLink to="#work">Деятельность</HashLink>
                   </li>
                   <li className="dot">.</li>
                   <li>
-                    <a href="sign-in">Вход</a>
+                    <HashLink to="sign-in">Вход</HashLink>
                   </li>
                 </ul>
               </nav>
@@ -115,13 +117,12 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="col-md-8 section-2 nopadding">
-            {/* <div className="logo-2 wp2"></div> */}
           </div>
         </div>
       </div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-4 section-3">{/* <div className="logo-3 wp3"></div> */}</div>
+          <div className="col-md-4 section-3"></div>
           <div className="col-md-4 section-text nopadding">
             <div className="wp6">
               <h2 className="front-frame">КНИТУ в рейтингах</h2>
@@ -149,17 +150,8 @@ const IndexPage = () => {
               <div className="flexslider">
                 <ul className="slides">
                   <li>
-                    {/* <div className="flex-twitter-icon"></div> */}
-                    {/* <h2 className="twitter-post-username">
-                      <a href="#">AOS New York @aod</a> <span>/ 35 min</span>
-                    </h2>
-                    <p className="twitter-post">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac
-                      nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium
-                      ante amet.
-                    </p> */}
                     <div className="img">
-                      <img src="src/assets/img/slide1.png" alt="Leather Seats" />
+                      <img src="public/assets/img/slide1.png" alt="Leather Seats" />
                       <div className="overlay">
                         <a href="http://google.com/" className="expand"></a>
                         <a className="close-overlay hidden">x</a>
@@ -168,7 +160,7 @@ const IndexPage = () => {
                   </li>
                   <li>
                     <div className="img">
-                      <img src="src/assets/img/slide2.png" alt="Leather Seats" />
+                      <img src="public/assets/img/slide2.png" alt="Leather Seats" />
                       <div className="overlay">
                         <a href="http://google.com/" className="expand"></a>
                         <a className="close-overlay hidden">x</a>
@@ -177,7 +169,7 @@ const IndexPage = () => {
                   </li>
                   <li>
                     <div className="img">
-                      <img src="src/assets/img/slide3.png" alt="Leather Seats" />
+                      <img src="public/assets/img/slide3.png" alt="Leather Seats" />
                       <div className="overlay">
                         <a href="http://google.com/" className="expand"></a>
                         <a className="close-overlay hidden">x</a>
@@ -196,7 +188,7 @@ const IndexPage = () => {
             <div className="col-md-4 left nopadding">
               <div className="left-box-1">
                 <div className="img">
-                  <img src="src/assets/img/bot1.jpg" alt="Leather Seats" />
+                  <img src="public/assets/img/bot1.jpg" alt="Leather Seats" />
                   <div className="overlay">
                     <a href="http://google.com/" className="expand">
                       leather seats
@@ -207,7 +199,7 @@ const IndexPage = () => {
               </div>
               <div className="left-box-2 box">
                 <div className="img">
-                  <img src="src/assets/img/bot2.jpg" alt="Custom Seats" />
+                  <img src="public/assets/img/bot2.jpg" alt="Custom Seats" />
                   <div className="overlay">
                     <a href="#" className="expand">
                       custom seats
@@ -219,7 +211,7 @@ const IndexPage = () => {
               <div className="clearfix"></div>
               <div className="left-box-btm box">
                 <div className="img">
-                  <img src="src/assets/img/bot3.jpg" alt="Limited Edition" />
+                  <img src="public/assets/img/bot3.jpg" alt="Limited Edition" />
                   <div className="overlay">
                     <a href="#" className="expand">
                       limited edition
@@ -232,7 +224,7 @@ const IndexPage = () => {
             <div className="col-md-4 mid nopadding">
               <div className="mid-box-1 box">
                 <div className="img">
-                  <img src="src/assets/img/bot4.jpg" alt="Shop Bags" />
+                  <img src="public/assets/img/bot4.jpg" alt="Shop Bags" />
                   <div className="overlay">
                     <a href="#" className="expand">
                       shop bags
@@ -243,7 +235,7 @@ const IndexPage = () => {
               </div>
               <div className="mid-box-2 box">
                 <div className="img">
-                  <img src="src/assets/img/bot10.jpg" alt="Shop Bikes" />
+                  <img src="public/assets/img/bot10.jpg" alt="Shop Bikes" />
                   <div className="overlay">
                     <a href="#" className="expand">
                       shop bikes
@@ -257,7 +249,7 @@ const IndexPage = () => {
             <div className="col-md-4 right nopadding">
               <div className="right-box-1 box">
                 <div className="img">
-                  <img src="src/assets/img/bot6.jpg" alt="Shop Now" />
+                  <img src="public/assets/img/bot6.jpg" alt="Shop Now" />
                   <div className="overlay">
                     <a href="#" className="expand">
                       shop now
@@ -268,7 +260,7 @@ const IndexPage = () => {
               </div>
               <div className="right-box-2 box">
                 <div className="img">
-                  <img src="src/assets/img/bot7.jpg" alt="Shop Seats" />
+                  <img src="public/assets/img/bot7.jpg" alt="Shop Seats" />
                   <div className="overlay">
                     <a href="#" className="expand">
                       shop seats
@@ -279,7 +271,7 @@ const IndexPage = () => {
               </div>
               <div className="right-box-3 box">
                 <div className="img">
-                  <img src="src/assets/img/bot8.jpg" alt="Shop Accessories" />
+                  <img src="public/assets/img/bot8.jpg" alt="Shop Accessories" />
                   <div className="overlay">
                     <a href="#" className="expand">
                       shop accessories
@@ -326,7 +318,7 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <footer id="contact">
+      <footer id="contact" data-name="contact">
         <div className="container">
           <div className="row">
             <div className="col-md-4 footer-leftcol">
@@ -359,7 +351,7 @@ const IndexPage = () => {
               {/* <p>
                 Designed by{' Son Nguyen '}
                 <a href="#">
-                  <img src="src/assets/img/yebo-icon.png" alt="Yebo Logo" />
+                  <img src="public/assets/img/yebo-icon.png" alt="Yebo Logo" />
                 </a>
               </p> */}
               <p className="nopadding">

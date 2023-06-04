@@ -3,6 +3,7 @@ const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -19,7 +20,7 @@ module.exports = {
     publicPath: '/'
   },
   output: {
-    path: path.resolve(__dirname, 'assets'),
+    path: path.resolve(__dirname, '../public'),
     filename: 'bundle.js',
     publicPath: './'
   },
@@ -78,6 +79,45 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+          { from: 'public', to: 'public' }
+      ]
+  })
   ]
 };
+// const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const path = require('path');
+
+// module.exports = {
+//   entry: './src/index.tsx',
+//   module: {
+//     rules: [
+//       {
+//         test: /\.ts?$/,
+//         use: 'ts-loader',
+//         exclude: /node_modules/,
+//       }
+//     ],
+//   },
+//   resolve: {
+//     extensions: ['.tsx', '.ts', '.js'],
+//   },
+//   output: {
+//     filename: 'bundle.js',
+//     path: path.resolve(__dirname, 'dist'),
+//   },
+
+//   plugins: [
+//     new HtmlWebpackPlugin({
+//         title: 'our project', 
+//         template: 'src/index.html' }) 
+//    ],
+
+//   devServer: {
+//     static: path.join(__dirname, "dist"),
+//     compress: true,
+//     port: 4000,
+//   },
+// };

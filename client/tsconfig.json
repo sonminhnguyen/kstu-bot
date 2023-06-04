@@ -28,14 +28,15 @@
   "include": [
     "./src/**/*.ts",
     "./src/**/*.tsx",
-    "src/data/database.js"
-, "src/components/RequireAuth.tsx"  ],
-  "compilerOptions": {
-    "lib": [
-      "es5",
-      "es6",
-      "dom",
-      "dom.iterable"
-    ]
-  }
+    "src/data/database.js",
+    "src/components/RequireAuth.tsx"
+  ],
+  // "compilerOptions": {
+  //   "lib": [
+  //     "es5",
+  //     "es6",
+  //     "dom",
+  //     "dom.iterable"
+  //   ]
+  // }
 }
