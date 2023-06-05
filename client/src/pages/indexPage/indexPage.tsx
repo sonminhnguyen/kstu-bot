@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Fragment, useState } from 'react';
-=======
 import React, { Fragment } from 'react';
->>>>>>> 987a381b15013bbb567013353f24075bf8036ce6
 import {
   // Navbar,
   Container,
@@ -11,13 +7,8 @@ import {
 } from 'rsuite';
 import mainLogo from '../../../public/assets/img/main-logo.png';
 import panel4 from '../../../public/assets/img/panel4.jpg';
-<<<<<<< HEAD
 // import {Row as ReactRow} from 'react-bootstrap/Row';
 import {Container as ReactContainer} from 'react-bootstrap';
-=======
-// import Row from 'react-bootstrap/Row';
-// import Container from 'react-bootstrap/Container';
->>>>>>> 987a381b15013bbb567013353f24075bf8036ce6
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -87,11 +78,7 @@ const IndexPage = () => {
             margin: 'auto'
           }}
         >
-<<<<<<< HEAD
           <ReactContainer style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-=======
-          <Container style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
->>>>>>> 987a381b15013bbb567013353f24075bf8036ce6
             <Navbar.Brand href="/" style={{ height: 'auto', marginTop: '10px', marginLeft: "10px "}}>
               <img src={mainLogo} />
             </Navbar.Brand>
@@ -123,11 +110,7 @@ const IndexPage = () => {
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
-<<<<<<< HEAD
           </ReactContainer>
-=======
-          </Container>
->>>>>>> 987a381b15013bbb567013353f24075bf8036ce6
         </Navbar>
         <Container>
           <img src={panel4} />
