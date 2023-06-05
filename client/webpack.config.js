@@ -3,6 +3,7 @@ const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -16,10 +17,13 @@ module.exports = {
     disableHostCheck: true,
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, ''),
-    publicPath: '/'
+    publicPath: '/',
+    proxy: {
+      '/': 'http://127.0.0.1:3000'
+    }
   },
   output: {
-    path: path.resolve(__dirname, 'assets'),
+    path: path.resolve(__dirname, '../public'),
     filename: 'bundle.js',
     publicPath: './'
   },
@@ -44,7 +48,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(sass|less|css)$/,
+        test: /\.(sass|less|css|css.map)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -68,7 +72,7 @@ module.exports = {
   },
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'Admin Dashboard Template',
+      title: 'KSTU-Bot',
       filename: 'index.html',
       template: './src/index.html',
       inject: true,
@@ -78,6 +82,45 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+          { from: 'public', to: 'public' }
+      ]
+  })
   ]
 };
+// const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const path = require('path');
+
+// module.exports = {
+//   entry: './src/index.tsx',
+//   module: {
+//     rules: [
+//       {
+//         test: /\.ts?$/,
+//         use: 'ts-loader',
+//         exclude: /node_modules/,
+//       }
+//     ],
+//   },
+//   resolve: {
+//     extensions: ['.tsx', '.ts', '.js'],
+//   },
+//   output: {
+//     filename: 'bundle.js',
+//     path: path.resolve(__dirname, 'dist'),
+//   },
+
+//   plugins: [
+//     new HtmlWebpackPlugin({
+//         title: 'our project', 
+//         template: 'src/index.html' }) 
+//    ],
+
+//   devServer: {
+//     static: path.join(__dirname, "dist"),
+//     compress: true,
+//     port: 4000,
+//   },
+// };

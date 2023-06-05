@@ -3,6 +3,7 @@ logs
 *.log
 npm-debug.log*
 karma-*
+assets 
 
 # Runtime data
 pids

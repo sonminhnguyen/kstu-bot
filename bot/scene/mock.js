@@ -125,7 +125,7 @@ const mock = [
 const createMock = async () => {
     const data = await knex.select("id", "label", "depth").table("commands");
     const newData = await Promise.all(data.map(async (data) => {
-        const children = await knex.select("id", "label", "depth", "file", "answer").table("commandchildrens").where("idparent", data.id);
+        const children = await knex.select("id", "label", "depth", "file", "answer").table("commandChildrens").where("idparent", data.id);
         // console.log({ ...data, children: children });
         // console.log(children[0].id);
         return { ...data, children: children }

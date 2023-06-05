@@ -212,7 +212,7 @@ const createChangeableScene = async () => {
             } catch (error) {
               console.log(error);
             }
-            ctx.reply("Your require have been sent. Have a nice day!");
+            ctx.reply("Ваше требование было отправлено. Хорошего дня!");
           }
         )
       );

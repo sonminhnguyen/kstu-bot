@@ -146,7 +146,7 @@ const Solved = () => {
               <span>
                 <a style={{ color: '#00BFFF' }} onClick={() => handleRevertEvent(rowData)}>
                   {' '}
-                  Возвращать{' '}
+                  Вернуть{' '}
                 </a>
               </span>
             )}

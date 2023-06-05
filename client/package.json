@@ -9,11 +9,12 @@
   "scripts": {
     "dev": "webpack serve --mode development --port 3100 --host 0.0.0.0 --progress ",
     "clear": "rm -rf assets",
-    "build:webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./assets/ ",
+    "build:webpack": "NODE_ENV=production  webpack --mode production --progress ",
     "build": "npm run clear && npm run build:webpack",
     "publish:gh-pages": "node gh-pages.js"
   },
   "proxy": "http://localhost:3000",
+  "secure": false,
   "keywords": [
     "react",
     "rsuite",
@@ -43,9 +44,9 @@
     "axios": "^1.2.0",
     "bootstrap": "^5.2.3",
     "classnames": "^2.3.1",
+    "copy-webpack-plugin": "^11.0.0",
     "date-fns": "^2.29.2",
     "feather-icons": "^4.29.0",
-    "formik": "^2.2.9",
     "lodash": "^4.17.21",
     "node-sass": "^8.0.0",
     "prop-types": "^15.6.0",
@@ -58,6 +59,7 @@
     "react-intl": "^6.0.5",
     "react-router": "6.3.0",
     "react-router-dom": "^6.3.0",
+    "react-router-hash-link": "^2.4.3",
     "react-slideshow-image": "^4.2.1",
     "rsuite": "5.21.0",
     "sass": "^1.62.1",

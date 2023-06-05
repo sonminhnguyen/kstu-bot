@@ -199,15 +199,15 @@ const Dashboard = () => {
             <HeaderCell>Телефон</HeaderCell>
             <NameCell dataKey="telephone" />
           </Column>
-          <Column width={300}>
+          <Column width={280}>
             <HeaderCell>Почта</HeaderCell>
             <NameCell dataKey="email" />
           </Column>
-          <Column width={80} flexGrow={1}>
+          <Column width={120} flexGrow={1}>
             <HeaderCell>Примечание</HeaderCell>
             <Cell dataKey="note" />
           </Column>
-          <Column width={300}>
+          <Column width={200}>
             <HeaderCell>Ссылка VK</HeaderCell>
             <Cell dataKey="linkVK" />
           </Column>
