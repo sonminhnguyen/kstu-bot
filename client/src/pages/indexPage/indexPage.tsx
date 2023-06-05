@@ -1,83 +1,158 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment, useState } from 'react';
+import {
+  // Navbar,
+  Container,
+  Row
+  //  Nav
+} from 'rsuite';
+import mainLogo from '../../../public/assets/img/main-logo.png';
+import panel4 from '../../../public/assets/img/panel4.jpg';
+// import {Row as ReactRow} from 'react-bootstrap/Row';
+import {Container as ReactContainer} from 'react-bootstrap';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 import { HashLink } from 'react-router-hash-link';
 const IndexPage = () => {
+  
   return (
     <Fragment>
       <header>
-        <div className="container">
-          <div className="row">
-            <div className="responsive-logo"></div>
-            <div className="pullcontainer">
-              <a href="#" id="pull">
-                <i className="fa fa-bars fa-2x"></i>
-              </a>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2">
-              <nav>
-                <div className="logo-holder"></div>
-                <ul className="clearfix">
-                  <li>
-                    <HashLink to="#about">Про КНИТУ</HashLink>
-                  </li>
-                  <li className="dot">.</li>
-                  <li>
-                    <HashLink to="#contact" className="r_spacer">
-                      Контакт
+        {/* <Navbar
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: 'auto',
+                marginBottom: '21px'
+              }}
+            >
+              <Nav
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  margin: 'auto'
+                }}
+              >
+                <Nav.Menu>
+                  <Nav.Item>
+                    <HashLink to="#about" style={{ color: '#4d4959' }}>
+                      ПРО КНИТУ
                     </HashLink>
-                  </li>
-                  <li>
-                    <HashLink to="#work">Деятельность</HashLink>
-                  </li>
-                  <li className="dot">.</li>
-                  <li>
-                    <HashLink to="sign-in">Вход</HashLink>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-        <div className="hero"></div>
+                  </Nav.Item>
+                  <span style={{ margin: '10px' }}>.</span>
+                  <Nav.Item>
+                    <HashLink to="#contact" style={{ color: '#4d4959' }}>
+                      КОНТАКТ
+                    </HashLink>{' '}
+                  </Nav.Item>
+                  <span style={{ margin: '10px' }}>.</span>
+                  <Nav.Item style={{ height: 'auto' }}>
+                    <HashLink to="#work" style={{ color: '#4d4959' }}>
+                      <img src={mainLogo} />
+                    </HashLink>
+                  </Nav.Item>
+                  <span style={{ margin: '10px' }}>.</span>
+                  <Nav.Item>
+                    <HashLink to="#work" style={{ color: '#4d4959' }}>
+                      ДЕЯТЕЛЬНОСТЬ
+                    </HashLink>
+                  </Nav.Item>
+                  <span style={{ margin: '10px' }}>.</span>
+                </Nav.Menu>
+                <Nav.Item>
+                  <HashLink to="sign-in" style={{ color: '#4d4959' }}>
+                    ВХОД
+                  </HashLink>
+                </Nav.Item>
+              </Nav>
+            </Navbar> */}
+        <Navbar
+          bg="light"
+          expand="lg"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            margin: 'auto'
+          }}
+        >
+          <ReactContainer style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Navbar.Brand href="/" style={{ height: 'auto', marginTop: '10px', marginLeft: "10px "}}>
+              <img src={mainLogo} />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav
+                className="me-auto"
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  margin: 'auto',
+                }}
+              >
+                <Nav.Link as={HashLink} to="#about" style={{ color: '#4d4959' }}>
+                  ПРО КНИТУ
+                </Nav.Link>
+                <span style={{ margin: '20px' }}>.</span>
+                <Nav.Link as={HashLink} to="#contact" style={{ color: '#4d4959' }}>
+                  КОНТАКТ
+                </Nav.Link>
+                <span style={{ margin: '20px' }}>.</span>
+                <Nav.Link as={HashLink} to="#work" style={{ color: '#4d4959' }}>
+                  ДЕЯТЕЛЬНОСТЬ
+                </Nav.Link>
+                <span style={{ margin: '20px' }}>.</span>
+                <Nav.Link as={HashLink} to="sign-in" style={{ color: '#4d4959' }}>
+                  ВХОД
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </ReactContainer>
+        </Navbar>
+        <Container>
+          <img src={panel4} />
+        </Container>
       </header>
-      <div className="container-fluid intro" id="about">
-        <div className="row">
-          <div className="col-md-8 col-md-offset-2">
-            <h1 className="chain">ИСТОРИЯ КНИТУ</h1>
-            <p className="text-intro">
-              «Казань — местность, где химическая промышленность в России имеет первостепенное
-              значение и кроме того, производства прядильно-ткацкое и мукомольное в Казани и близ ее
-              сообщают ей характер важного промышленного центра, в котором вполне справедливо
-              учредить промышленное училище». (Из доклада министра народного просвещения на
-              заседании Государственного Совета 26 июня 1889 г.)
-            </p>
-            <p className="text-intro">
-              Казанский национальный исследовательский технологический университет берет свое начало
-              с Казанского соединенного промышленного училища. 14 (26) июня 1890 года император
-              Александр III повелел создать в Казани соединенное среднее химико-технологическое
-              училище и низшее техническое училище с механической, химической и строительной
-              специальностями. Для строительства училища был выделен земельный участок на Арском
-              поле. Кроме учебного корпуса (ныне корпус Б), были сооружены и оборудованы
-              технико-химические, столярные и слесарно-механические мастерские, газовый завод,
-              собственная электростанция, жилой корпус для преподавателей и сотрудников (корпус О).
-            </p>
-            <p className="text-intro">
-              10 сентября 1897 года состоялось торжественное открытие Казанского промышленного
-              училища. Училище готовило мастеров-практиков и было оснащено полузаводским и заводским
-              оборудованием для производства соды, сульфата натрия, соляной кислоты, сухой перегонки
-              дерева, железного и медного купороса, квасцов, мыловарения и клееварения. Казанское
-              промышленное училище дало 17 выпусков, подготовив 1145 специалистов. Постановлением
-              отдела вузов Наркомпроса РСФСР от 2 апреля 1919 года Казанское промышленное училище
-              преобразуется в Казанский политехнический институт. Этот институт стал первым высшим
-              учебным заведением инженерного профиля в Татарстане.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid">
-        <div className="row">
+      <Container id="about">
+        <Row style={{ maxWidth: '80%', margin: 'auto', marginBottom: '50px' }}>
+          {/* <Row style={{ maxWidth: '80%', margin: 'auto', marginBottom: '50px' }}> */}
+          <h1 className="chain" style={{ margin: '30px' }}>
+            ИСТОРИЯ КНИТУ
+          </h1>
+          <p className="text-intro">
+            «Казань — местность, где химическая промышленность в России имеет первостепенное
+            значение и кроме того, производства прядильно-ткацкое и мукомольное в Казани и близ ее
+            сообщают ей характер важного промышленного центра, в котором вполне справедливо учредить
+            промышленное училище». (Из доклада министра народного просвещения на заседании
+            Государственного Совета 26 июня 1889 г.)
+          </p>
+          <p className="text-intro">
+            Казанский национальный исследовательский технологический университет берет свое начало с
+            Казанского соединенного промышленного училища. 14 (26) июня 1890 года император
+            Александр III повелел создать в Казани соединенное среднее химико-технологическое
+            училище и низшее техническое училище с механической, химической и строительной
+            специальностями. Для строительства училища был выделен земельный участок на Арском поле.
+            Кроме учебного корпуса (ныне корпус Б), были сооружены и оборудованы технико-химические,
+            столярные и слесарно-механические мастерские, газовый завод, собственная электростанция,
+            жилой корпус для преподавателей и сотрудников (корпус О).
+          </p>
+          <p className="text-intro">
+            10 сентября 1897 года состоялось торжественное открытие Казанского промышленного
+            училища. Училище готовило мастеров-практиков и было оснащено полузаводским и заводским
+            оборудованием для производства соды, сульфата натрия, соляной кислоты, сухой перегонки
+            дерева, железного и медного купороса, квасцов, мыловарения и клееварения. Казанское
+            промышленное училище дало 17 выпусков, подготовив 1145 специалистов. Постановлением
+            отдела вузов Наркомпроса РСФСР от 2 апреля 1919 года Казанское промышленное училище
+            преобразуется в Казанский политехнический институт. Этот институт стал первым высшим
+            учебным заведением инженерного профиля в Татарстане.
+          </p>
+        </Row>
+      </Container>
+      <Container id="work">
+        <Row>
           <div className="col-md-8 section-1 nopadding" id="work">
             {/* <div className="logo-1 wp1"></div> */}
           </div>
@@ -98,8 +173,8 @@ const IndexPage = () => {
               <div className="arrow"></div>
             </div>
           </div>
-        </div>
-        <div className="row">
+        </Row>
+        <Row>
           <div className="col-md-4 section-text nopadding">
             <div className="wp5">
               <h2 className="mech">Образовательная деятельность</h2>
@@ -116,12 +191,11 @@ const IndexPage = () => {
               <div className="arrow"></div>
             </div>
           </div>
-          <div className="col-md-8 section-2 nopadding">
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid">
-        <div className="row">
+          <div className="col-md-8 section-2 nopadding"></div>
+        </Row>
+      </Container>
+      <Container>
+        <Row>
           <div className="col-md-4 section-3"></div>
           <div className="col-md-4 section-text nopadding">
             <div className="wp6">
@@ -141,11 +215,11 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="col-md-4 section-4"></div>
-        </div>
-      </div>
-      <section className="flex-container">
-        <div className="container">
-          <div className="row">
+        </Row>
+      </Container>
+      <section className="flex-container" style={{ margin: 'auto', width: '80%' }}>
+        <Container>
+          <Row>
             <div className="col-md-12">
               <div className="flexslider">
                 <ul className="slides">
@@ -179,11 +253,11 @@ const IndexPage = () => {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
+          </Row>
+        </Container>
       </section>
-      <div className="container-fluid" id="shop">
-        <div className="row">
+      <Container id="shop">
+        <Row>
           <div id="effect" className="effects clearfix">
             <div className="col-md-4 left nopadding">
               <div className="left-box-1">
@@ -282,10 +356,10 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </Row>
+      </Container>
       <section className="discover">
-        <div className="container-fluid">
+        <Container>
           <div className="row">
             <div className="col-md-4 col-md-offset-4">
               <a href="https://www.kstu.ru/index.jsp" className="shop-btn">
@@ -293,11 +367,11 @@ const IndexPage = () => {
               </a>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
       <section className="sign_up">
-        <div className="container">
-          <div className="row">
+        <Container>
+          <Row>
             <div className="col-md-6 col-md-offset-3 sign-up">
               <h2 className="logo-header">Оставить электронную почту!</h2>
               <form name="signup-form">
@@ -315,12 +389,13 @@ const IndexPage = () => {
                 </button>
               </form>
             </div>
-          </div>
-        </div>
+          </Row>
+        </Container>
       </section>
+
       <footer id="contact" data-name="contact">
-        <div className="container">
-          <div className="row">
+        <Container>
+          <Row>
             <div className="col-md-4 footer-leftcol">
               <p>
                 <span className="bold-16p">Татарстан </span>
@@ -328,23 +403,6 @@ const IndexPage = () => {
               </p>
             </div>
             <div className="col-md-4 footer-midcol">
-              {/* <ul>
-                <li>
-                  <a href="#" className="twitter-icon">
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="facebook-icon">
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="pintrest-icon">
-                    Pintrest
-                  </a>
-                </li>
-              </ul> */}
               <div className="clearfix"></div>
             </div>
             <div className="col-md-4 footer-rightcol">
@@ -358,8 +416,8 @@ const IndexPage = () => {
                 Developed by <a href="https://vk.com/wolfmsqg">Son Nguyen</a>
               </p>
             </div>
-          </div>
-        </div>
+          </Row>
+        </Container>
       </footer>
     </Fragment>
   );
