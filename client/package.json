@@ -13,7 +13,8 @@
     "build": "npm run clear && npm run build:webpack",
     "publish:gh-pages": "node gh-pages.js"
   },
-  "proxy": "https://kstubot.herokuapp.com/",
+  "proxy": "http://localhost:3000",
+  "secure": false,
   "keywords": [
     "react",
     "rsuite",

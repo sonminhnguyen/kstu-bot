@@ -17,7 +17,10 @@ module.exports = {
     disableHostCheck: true,
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, ''),
-    publicPath: '/'
+    publicPath: '/',
+    proxy: {
+      '/': 'http://127.0.0.1:3000'
+    }
   },
   output: {
     path: path.resolve(__dirname, '../public'),
@@ -69,7 +72,7 @@ module.exports = {
   },
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'Admin Dashboard Template',
+      title: 'KSTU-Bot',
       filename: 'index.html',
       template: './src/index.html',
       inject: true,

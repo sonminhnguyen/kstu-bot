@@ -26,7 +26,7 @@ const SignUp = () => {
   const onSubmit = async () => {
     console.log('submitted!');
     try {
-      const response = await axios.post('http://localhost:3000/users/login', formValue);
+      const response = await axios.post('/users/login', formValue);
       if (response.status === 200) {
         saveAuth(response.data);
         navigate(from, { replace: true });
