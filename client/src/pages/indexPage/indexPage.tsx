@@ -8,13 +8,25 @@ import {
 import mainLogo from '../../../public/assets/img/main-logo.png';
 import panel4 from '../../../public/assets/img/panel4.jpg';
 // import {Row as ReactRow} from 'react-bootstrap/Row';
-import {Container as ReactContainer} from 'react-bootstrap';
+import { Container as ReactContainer } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import { HashLink } from 'react-router-hash-link';
+// import '../../../public/assets/css/bootstrap.min.css';
+// import '../../../public/assets/css/styles.css?v=1.2';
+// import '../../../public/assets/css/queries.css?v=1.2';
+// import '../../../public/assets/css/flexslider.css';
+// import '../../../public/assets/css/animate.css';
+
+// import '../../../public/assets/js/bootstrap.min.js';
+// import '../../../public/assets/js/jquery.flexslider.js';
+// import '../../../public/assets/js/scripts.js';
+// import "../../../public/assets/js/modernizr.js";
+// import "../../../public/assets/js/waypoints.min.js";
+// declare module 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js';
+
 const IndexPage = () => {
-  
   return (
     <Fragment>
       <header>
@@ -79,7 +91,10 @@ const IndexPage = () => {
           }}
         >
           <ReactContainer style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-            <Navbar.Brand href="/" style={{ height: 'auto', marginTop: '10px', marginLeft: "10px "}}>
+            <Navbar.Brand
+              href="/"
+              style={{ height: 'auto', marginTop: '10px', marginLeft: '10px ' }}
+            >
               <img src={mainLogo} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -90,19 +105,19 @@ const IndexPage = () => {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  margin: 'auto',
+                  margin: 'auto'
                 }}
               >
                 <Nav.Link as={HashLink} to="#about" style={{ color: '#4d4959' }}>
                   ПРО КНИТУ
                 </Nav.Link>
                 <span style={{ margin: '20px' }}>.</span>
-                <Nav.Link as={HashLink} to="#contact" style={{ color: '#4d4959' }}>
-                  КОНТАКТ
-                </Nav.Link>
-                <span style={{ margin: '20px' }}>.</span>
                 <Nav.Link as={HashLink} to="#work" style={{ color: '#4d4959' }}>
                   ДЕЯТЕЛЬНОСТЬ
+                </Nav.Link>
+                <span style={{ margin: '20px' }}>.</span>
+                <Nav.Link as={HashLink} to="#contact" style={{ color: '#4d4959' }}>
+                  КОНТАКТ
                 </Nav.Link>
                 <span style={{ margin: '20px' }}>.</span>
                 <Nav.Link as={HashLink} to="sign-in" style={{ color: '#4d4959' }}>

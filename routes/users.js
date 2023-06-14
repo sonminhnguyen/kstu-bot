@@ -38,14 +38,16 @@ router.post(
   passport.authenticate("local"),
   async (req, res, next) => {
     try {
-      const user = await knex.select("id","username", "telephone", "email", "role").table("users").where('username', req.user.username).first();
+      const user = await knex
+        .select("id", "username", "telephone", "email", "role")
+        .table("users")
+        .where("username", req.user.username)
+        .first();
 
       jwt.sign(user, SECRET, (error, token) => {
-        res
-          .status(200)
-          .send({ ...user, token });
+        res.status(200).send({ ...user, token });
       });
-      console.log(req.user)
+      console.log(req.user);
     } catch (e) {
       console.log(e);
       res.status(400).send();
@@ -54,87 +56,109 @@ router.post(
 );
 
 router.get("/getGroups", auth, async (req, res, next) => {
-  const groups = await knex.select().table("groups");
-  res.send(JSON.stringify(groups));
+  try {
+    const groups = await knex.select().table("groups");
+    res.send(JSON.stringify(groups));
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 router.get("/getUsers", async (req, res, next) => {
-  const users = await knex.select().table("users");
-  // console.log(users);
-  res.send(JSON.stringify(users));
+  try {
+    const users = await knex.select().table("users");
+    res.send(JSON.stringify(users));
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 router.get("/getProfile", async (req, res, next) => {
-  console.log(req.user);
-  const users = await knex.select("username", "telephone", "email").table("users");
-  // console.log(users);
-  res.send(JSON.stringify(users));
+  try {
+    const users = await knex
+      .select("username", "telephone", "email")
+      .table("users");
+    res.send(JSON.stringify(users));
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 router.get("/getDocs", auth, async (req, res, next) => {
-  const docs = await knex("uploads")
-    .join("users", "uploads.id_user", "users.id_user")
-    .select("uploads.id_user", "id_doc", "title", "url", "profile");
-  res.send(JSON.stringify(docs));
+  try {
+    const docs = await knex("uploads")
+      .join("users", "uploads.id_user", "users.id_user")
+      .select("uploads.id_user", "id_doc", "title", "url", "profile");
+    res.send(JSON.stringify(docs));
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 router.post("/update", auth, async (req, res, next) => {
-  const { username, password, newpassword, profile } = req.body;
+  try {
+    const { username, password, newpassword, profile } = req.body;
 
-  const userPassword = await knex("users")
-    .where("username", username)
-    .select("password")
-    .first();
-  const isCorrectPassword = await bcrypt.compare(
-    password,
-    userPassword.password
-  );
+    const userPassword = await knex("users")
+      .where("username", username)
+      .select("password")
+      .first();
+    const isCorrectPassword = await bcrypt.compare(
+      password,
+      userPassword.password
+    );
 
-  if (isCorrectPassword) {
-    const hashedPassword = await bcrypt.hash(newpassword, 10);
-    const user = {
-      username,
-      password: hashedPassword,
-      profile,
-    };
-    try {
-      await knex("users")
-        .where("username", username)
-        .update({ ...user });
-      res.status(200).send("update success!");
-    } catch (e) {
-      res.status(400).send({ error: e });
+    if (isCorrectPassword) {
+      const hashedPassword = await bcrypt.hash(newpassword, 10);
+      const user = {
+        username,
+        password: hashedPassword,
+        profile,
+      };
+      try {
+        await knex("users")
+          .where("username", username)
+          .update({ ...user });
+        res.status(200).send("update success!");
+      } catch (e) {
+        res.status(400).send({ error: e });
+      }
+    } else {
+      res.status(400).send({ error: "old password not correct!" });
     }
-  } else {
-    res.status(400).send({ error: "old password not correct!" });
+  } catch (e) {
+    console.log(e);
   }
 });
 
 router.post("/remove", auth, async (req, res, next) => {
-  if (req.user.admin) {
-    console.log(req.body);
-    try {
-      await knex("users").where("username", req.body.username).del();
-      res.status(200).send("remove success!");
-    } catch (e) {
-      res.send({ error: e });
+  try {
+    if (req.user.admin) {
+      console.log(req.body);
+      try {
+        await knex("users").where("username", req.body.username).del();
+        res.status(200).send("remove success!");
+      } catch (e) {
+        res.send({ error: e });
+      }
+    } else {
+      res.send({ message: "You have no permission." });
     }
-  } else {
-    res.send({ message: "You have no permission." });
+  } catch (e) {
+    console.log(e);
   }
 });
 
-
-router.post('/updateUsers', async (req, res, next) => {
+router.post("/updateUsers", async (req, res, next) => {
   try {
-    const backup = await knex.select().table('users');
-    console.log(req.body)
+    const backup = await knex.select().table("users");
+    console.log(req.body);
     try {
-        await knex('users').truncate();
-        await knex('users').insert([...req.body])
+      await knex("users").truncate();
+      await knex("users").insert([...req.body]);
     } catch (error) {
-        console.log(error);
-        await knex('users').insert([...backup])
+      console.log(error);
+      await knex("users").insert([...backup]);
     }
   } catch (error) {
     console.log(error);

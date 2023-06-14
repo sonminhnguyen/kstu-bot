@@ -31,25 +31,25 @@ const IndexPage = () => {
                     ПРО КНИТУ
                   </HashLink>
                 </Nav.Item>
-                <span style={{margin: "10px"}}>.</span>
-                <Nav.Item>
-                  <HashLink to="#contact" style={{ color: '#4d4959' }}>
-                    КОНТАКТ
-                  </HashLink>{' '}
-                </Nav.Item>
-                <span style={{margin: "10px"}}>.</span>
-                <Nav.Item style={{ height: 'auto' }}>
-                  <HashLink to="#work" style={{ color: '#4d4959' }}>
-                    <img src={mainLogo} />
-                  </HashLink>
-                </Nav.Item>
-                <span style={{margin: "10px"}}>.</span>
+                <span style={{ margin: '10px' }}>.</span>
                 <Nav.Item>
                   <HashLink to="#work" style={{ color: '#4d4959' }}>
                     ДЕЯТЕЛЬНОСТЬ
                   </HashLink>
                 </Nav.Item>
-                <span style={{margin: "10px"}}>.</span>
+                <span style={{ margin: '10px' }}>.</span>
+                <Nav.Item style={{ height: 'auto' }}>
+                  <HashLink to="#work" style={{ color: '#4d4959' }}>
+                    <img src={mainLogo} />
+                  </HashLink>
+                </Nav.Item>
+                <span style={{ margin: '10px' }}>.</span>
+                <Nav.Item>
+                  <HashLink to="#contact" style={{ color: '#4d4959' }}>
+                    КОНТАКТ
+                  </HashLink>{' '}
+                </Nav.Item>
+                <span style={{ margin: '10px' }}>.</span>
                 <Nav.Item>
                   <HashLink to="sign-in" style={{ color: '#4d4959' }}>
                     ВХОД

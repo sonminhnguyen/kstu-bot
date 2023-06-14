@@ -26,17 +26,15 @@ const ModalDeteleRow = (props: any) => {
   return (
     <Modal onClose={onClose} {...rest}>
       <Modal.Header>
-        <Modal.Title>Delete User</Modal.Title>
+        <Modal.Title>Удалить пользователя</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        Are you sure to delete this user?
-      </Modal.Body>
+      <Modal.Body>Вы уверены, что хотите удалить этого пользователя?</Modal.Body>
       <Modal.Footer>
         <Button onClick={handleDelete} appearance="primary">
-          Yes
+          Да
         </Button>
         <Button onClick={onClose} appearance="subtle">
-          No
+          Нет
         </Button>
       </Modal.Footer>
     </Modal>

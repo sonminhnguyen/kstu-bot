@@ -6,7 +6,7 @@ import { DashboardContext } from './context';
 const ModalDeteleRow = (props: any) => {
   const { rowData, onClose, ...rest } = props;
   const [database, setDatabase] = useContext<unknown | any>(DashboardContext);
-  
+
   const handleDelete = () => {
     onClose();
     const newDatabase = database.filter(data => data.id !== rowData.id);
@@ -23,15 +23,15 @@ const ModalDeteleRow = (props: any) => {
   return (
     <Modal onClose={onClose} {...rest}>
       <Modal.Header>
-        <Modal.Title>Delete User</Modal.Title>
+        <Modal.Title>Удалить студента</Modal.Title>
       </Modal.Header>
-      <Modal.Body>Are you sure to delete this user?</Modal.Body>
+      <Modal.Body>Вы уверены, что хотите удалить этого студента?</Modal.Body>
       <Modal.Footer>
         <Button onClick={handleDelete} appearance="primary">
-          Yes
+          Да
         </Button>
         <Button onClick={onClose} appearance="subtle">
-          No
+          Нет
         </Button>
       </Modal.Footer>
     </Modal>
