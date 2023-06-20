@@ -5,19 +5,18 @@
 exports.up = async (knex) => {
     await knex.schema.createTable('requires', function(table) {
         table.increments('id');
-        table.string('event');
-        table.string('title');
-        table.string('note');
-        table.string('group');
-        table.boolean('solved');
+        table.string('event').defaultTo(null);
+        table.string('title').defaultTo(null);
+        table.string('note').defaultTo(null);
+        table.string('group').defaultTo(null);
+        table.string('solved').defaultTo("0");
         //students table
-        table.string('name');
-        table.string('year');
-        table.string('telephone');
-        table.integer('id_vk');
-        table.string('linkVK');
-        table.string('email');
-        table.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
+        table.string('name').defaultTo(null);
+        table.string('year').defaultTo(null);
+        table.string('telephone').defaultTo(null);
+        table.string('id_vk').defaultTo(null);
+        table.string('linkVK').defaultTo(null);
+        table.string('email').defaultTo(null);
       });
 };
 

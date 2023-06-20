@@ -98,7 +98,7 @@ const EventModal = (props: any) => {
             <Form.Control name="title" />
           </Form.Group>
           <Form.Group controlId="textarea">
-            <Form.ControlLabel>Message</Form.ControlLabel>
+            <Form.ControlLabel>Сообщение</Form.ControlLabel>
             <Form.Control rows={5} name="message" accepter={Textarea} />
           </Form.Group>
           <Checkbox onChange={() => setHidden(!hidden)}>Напоминание для группы</Checkbox>

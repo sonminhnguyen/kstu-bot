@@ -153,7 +153,9 @@ const createChangeableScene = async () => {
           async (ctx) => {
             ctx.scene.leave();
             ctx.session.group = ctx.message.text;
-            ctx.reply(`Привет ${ctx.message.text}, Добро пожаловать в KSTU-Bot`);
+            ctx.reply(
+              `Привет ${ctx.message.text}, Добро пожаловать в KSTU-Bot`
+            );
             try {
               await knex("students").insert({
                 name: ctx.session.name,
@@ -197,16 +199,18 @@ const createChangeableScene = async () => {
               .select()
               .table("students")
               .where({ id_vk: parseInt(ctx.message.peer_id) });
-            // console.log(user[0]);
+            const id = await knex("requires").count("id");
             const newRequire = {
+              id: parseInt(id[0].count) + 1,
               event: ctx.session.event,
               title: ctx.session.title,
               name: user[0].name,
               group: user[0].group,
               id_vk: user[0].id_vk,
               note: ctx.session.note,
-              solved: 0,
+              solved: "0",
             };
+            console.log(newRequire);
             try {
               await knex("requires").insert({ ...newRequire });
             } catch (error) {

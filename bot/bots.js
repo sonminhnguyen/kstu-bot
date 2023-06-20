@@ -8,7 +8,7 @@ const knex = require("../database");
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 1;
 const { mock } = require("./scene/mock");
 const fixedScene = require("./scene/fixedScene");
-const {createChangeableScene} = require("./scene/ChangeableScene");
+const { createChangeableScene } = require("./scene/ChangeableScene");
 
 const bot = new VkBot({
   token: process.env.TOKEN,
@@ -31,23 +31,16 @@ createChangeableScene().then((ChangeableScece) => {
       ctx.scene.enter(`${command.name}`);
     });
   });
-});
-
-fixedScene.forEach((command) => {
-  bot.command(`${command.name}`, (ctx) => {
-    ctx.scene.enter(`${command.name}`);
+  fixedScene.forEach((command) => {
+    bot.command(`${command.name}`, (ctx) => {
+      ctx.scene.enter(`${command.name}`);
+    });
   });
 });
 
-// ChangeableScene.forEach(command => {
-//   bot.command(`${command.name}`, (ctx) => {
-//     ctx.scene.enter(`${command.name}`)
-//   });
-// })
-
 bot.command("/конец", async (ctx) => {
   await knex("students").where("id_vk", ctx.message.peer_id).del();
-  ctx.reply("Thanks for using!");
+  ctx.reply("Спасибо за использование!");
 });
 
 bot.command("/checkid", async (ctx) => {

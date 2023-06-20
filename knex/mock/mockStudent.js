@@ -4,7 +4,7 @@ const mock = [
         "id": 1,
         "id_vk": 509715385,
         "avatar": "",
-        "name": "Сон Нгуен",
+        "name": "Нгуен Минь Сон",
         "group": "8191-22",
         "year": "4",
         "note": "",
@@ -15,223 +15,224 @@ const mock = [
     {
         "id": 2,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/536.jpg",
-        "name": "Семен Анисимов",
+        "name": "Алексей Александрович Иванов",
         "group": "8191-22",
         "year": "3",
         "note": "",
         "telephone": "+7 903 045 6188",
         "linkVK": "http://vk.com/Carmen",
-        "email": "SemyonAnisimov@mail.ru"
+        "email": "AlexeyAlexandrovichIvanov@mail.ru"
     },
     {
         "id": 3,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/160.jpg",
-        "name": "Валериан Волков",
+        "name": "Вадим Игоревич Смирнов",
         "group": "8191-31",
         "year": "5",
         "note": "",
         "telephone": "+7 903 897 4334",
         "linkVK": "http://vk.com/Daniela",
-        "email": "ValerianVolkov6@gmail.com"
+        "email": "VadimIgorevichSmirnov6@gmail.com"
     },
     {
         "id": 4,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/202.jpg",
-        "name": "Валерий Ершов",
+        "name": "Данил Сергеевич Кузнецов",
         "group": "8191-31",
         "year": "5",
         "note": "Отлично",
         "telephone": "+7 903 936 6608",
         "linkVK": "http://vk.com/Alessia",
-        "email": "ValeriErshov35@gmail.com"
+        "email": "DanilSergeyevichKuznetsov35@gmail.com"
     },
     {
         "id": 5,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/632.jpg",
-        "name": "Глеб Казакова",
+        "name": "Егор Геннадьевич Попов",
         "group": "8191-11",
         "year": "1",
         "note": "",
         "telephone": "+7 903 409 3136",
         "linkVK": "http://vk.com/Sophie",
-        "email": "GlebKazakova28@hotmail.com"
+        "email": "EgorGennadievichPopov28@hotmail.com"
     },
     {
         "id": 6,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/477.jpg",
-        "name": "Антон Лукьянова",
+        "name": "Кирилл Дмириевич Васильев",
         "group": "8191-21",
         "year": "1",
         "note": "Отлично",
         "telephone": "+7 903 125 1020",
         "linkVK": "http://vk.com/Emely",
-        "email": "AntonLukyanova27@hotmail.com"
+        "email": "KirillDmirievichVasiliev27@hotmail.com"
     },
     {
         "id": 7,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/11.jpg",
-        "name": "Устин Максимова",
+        "name": "Леонид Никитич Петров",
         "group": "8191-11",
         "year": "2",
         "note": "Отлично",
         "telephone": "+7 903 652 7061",
         "linkVK": "http://vk.com/Valentina",
-        "email": "UstinMaksimova50@yahoo.com"
+        "email": "LeonidNikitichPetrov50@yahoo.com"
     },
     {
         "id": 8,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/553.jpg",
-        "name": "Артур Соловьев",
+        "name": "Максим Ильич Соколов",
         "group": "8191-11",
         "year": "1",
         "note": "",
         "telephone": "+7 903 583 0549",
         "linkVK": "http://vk.com/Jamie",
-        "email": "ArturSolovyov80@yahoo.com"
+        "email": "MaximIlyichSokolov80@yahoo.com"
     },
     {
         "id": 9,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/504.jpg",
-        "name": "Саша Кузьмин",
+        "name": "Матвей Александрович Михайлов",
         "group": "8191-31",
         "year": "5",
         "note": "",
         "telephone": "+7 903 372 4898",
         "linkVK": "http://vk.com/Malinda",
-        "email": "Sacha.Kuzmin@gmail.com"
+        "email": "Matvey.Alexandrovich.Mikhailov@gmail.com"
     },
     {
         "id": 10,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/692.jpg",
-        "name": "Михаил Афанасьева",
+        "name": "Никита Игоревич Новиков",
         "group": "8191-11",
         "year": "5",
         "note": "Хорошо",
         "telephone": "+7 903 638 7590",
         "linkVK": "http://vk.com/Rogers",
-        "email": "MikhailAfanaseva@gmail.com"
+        "email": "NikitaIgorevichNovikov@gmail.com"
     },
     {
         "id": 11,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/499.jpg",
-        "name": "Сергей Бирюкова",
+        "name": "Олег Сергеевич Морозов",
         "group": "8191-31",
         "year": "5",
         "note": "",
         "telephone": "+7 903 899 7994",
         "linkVK": "http://vk.com/Vickie",
-        "email": "SergeyBiryukova94@gmail.com"
+        "email": "OlegSergeevichMorozov94@gmail.com"
     },
     {
         "id": 12,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1221.jpg",
-        "name": "Валериана Любимова",
+        "name": "Ирина Игорьевна Николаева",
         "group": "8191-21",
         "year": "4",
         "note": "",
         "telephone": "+7 903 969 0821",
         "linkVK": "http://vk.com/Mazie",
-        "email": "ValerianLyubimova71@gmail.com"
+        "email": "IrinaIgorevnaNikolaeva71@gmail.com"
     },
     {
         "id": 13,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/292.jpg",
-        "name": "Станислав Фадеева",
+        "name": "Ксения Дмитриевна Степанова",
         "group": "8191-11",
         "year": "4",
         "note": "",
         "telephone": "+7 903 552 1010",
         "linkVK": "http://vk.com/Aurelia",
-        "email": "StanislavFadeeva@hotmail.com"
+        "email": "KseniaDmitrievnaStepanova@hotmail.com"
     },
     {
         "id": 14,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/218.jpg",
-        "name": "Игорь Галкина",
+        "name": "Лариса Ильинична Козлова",
         "group": "8191-22",
         "year": "4",
         "note": "",
         "telephone": "+7 903 810 3434",
         "linkVK": "http://vk.com/Sterling",
-        "email": "IgorGalkina@yahoo.com"
+        "email": "LarisaIlyinichnaKozlova@yahoo.com"
     },
     {
         "id": 15,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/401.jpg",
-        "name": "Иван Зотова",
+        "name": "Мария Александровна Павлова",
         "group": "8191-31",
         "year": "3",
         "note": "",
         "telephone": "+7 903 128 1384",
         "linkVK": "http://vk.com/Felix",
-        "email": "IvanZotova@gmail.com"
+        "email": "MariaAlexandrovnaPavlova@gmail.com"
     },
     {
         "id": 16,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1169.jpg",
-        "name": "Константин Семёнова",
+        "name": "Надежда Геннадьевна Егорова",
         "group": "8191-21",
         "year": "2",
         "note": "",
         "telephone": "+7 903 100 1797",
         "linkVK": "http://vk.com/Chanelle",
-        "email": "KonstantinSemyonova32@hotmail.com"
+        "email": "NadezhdaGennadievnaEgorova32@hotmail.com"
     },
     {
         "id": 17,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1062.jpg",
-        "name": "Василий Калинин",
+        "name": "Наталья Игорьевна Морозова",
         "group": "8191-21",
         "year": "5",
         "note": "",
         "telephone": "+7 903 935 0262",
         "linkVK": "http://vk.com/Arjun",
-        "email": "WassilyKalinin91@hotmail.com"
+        "email": "NataliaIgorevnaMorozova91@hotmail.com"
     },
     {
         "id": 18,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/913.jpg",
-        "name": "Амир Ершова",
+        "name": "Оксана Никитична Алексеева",
         "group": "8191-22",
         "year": "1",
         "note": "Хорошо",
         "telephone": "+7 903 454 3209",
         "linkVK": "http://vk.com/Napoleon",
-        "email": "Amir_Ershova79@hotmail.com"
+        "email": "Oksana_Nikitichna_Alekseeva79@hotmail.com"
     },
     {
         "id": 19,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/115.jpg",
-        "name": "Тимур Королев",
+        "name": "Светлана Никитична Лебедева",
         "group": "8191-21",
         "year": "3",
         "note": "Хорошо",
         "telephone": "+7 903 782 3173",
         "linkVK": "http://vk.com/Wilma",
-        "email": "Timur.Korolev38@yahoo.com"
+        "email": "Svetlana.NikitichnaLebedeva38@yahoo.com"
     },
     {
         "id": 20,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/245.jpg",
-        "name": "Василий Симонов",
+        "name": "Татьяна Александровна Федорова",
         "group": "8191-22",
         "year": "1",
         "note": "Хорошо",
         "telephone": "+7 903 107 8786",
         "linkVK": "http://vk.com/Jonathan",
-        "email": "VasilySimonov65@gmail.com"
+        "email": "TatyanaAleksandrovnaFedorova65@gmail.com"
     },
     {
         "id": 21,
         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1077.jpg",
-        "name": "Давид Матвеев",
+        "name": "Юлия Игорьевна Новикова",
         "group": "8191-31",
         "year": "5",
         "note": "Отлично",
         "telephone": "+7 903 269 3574",
         "linkVK": "http://vk.com/Laurianne",
-        "email": "David_Matveev40@gmail.com"
+        "email": "Yulia_IgorevnaNovikova40@gmail.com"
     },
 ]
 
 module.exports = { mock } 
+

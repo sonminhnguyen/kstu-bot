@@ -53,8 +53,8 @@ export const TestCell = ({ ...props }) => {
       if (data.id === props.rowData.id) {
         const children = [...data.children, {
           id: (props.rowData.id) * 100 + props.rowData.children.length + 1,
-          label: 'Label',
-          answer: 'This is answer',
+          label: 'ярлык',
+          answer: 'Это ответ чат-бота',
           file: 'fileURL',
           depth: 1,
         }];

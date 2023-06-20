@@ -16,14 +16,14 @@ const Command = () => {
       ...database,
       {
         id: database.length + 1,
-        label: '/command',
+        label: '/команда',
         depth: 0,
         children: [
           {
             id: (database.length + 1) * 100 + 1,
-            label: 'Label',
+            label: 'Ярлык',
             depth: 1,
-            description: 'This is description',
+            description: 'Это описание чат-бота',
             file: 'fileURL'
           }
         ]

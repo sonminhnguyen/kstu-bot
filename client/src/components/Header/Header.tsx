@@ -49,21 +49,21 @@ const Header = () => {
       <Popover ref={ref} className={className} style={{ left, top }} full>
         <Dropdown.Menu onSelect={handleSelect}>
           <Dropdown.Item panel style={{ padding: 10, width: 160 }}>
-            <p style={{ textAlign: 'left' }}>Signed in as</p>
+            <p style={{ textAlign: 'left' }}>Вход как</p>
             <strong>{auth.user.username}</strong>
           </Dropdown.Item>
           <Dropdown.Item divider />
-          <Dropdown.Item eventKey={1}>Profile & account</Dropdown.Item>
-          <Dropdown.Item eventKey={2}>Feedback</Dropdown.Item>
+          <Dropdown.Item eventKey={1}>Профиль и аккунт</Dropdown.Item>
+          <Dropdown.Item eventKey={2}>Обратная связь</Dropdown.Item>
           <Dropdown.Item divider />
-          <Dropdown.Item onClick={logout}>Sign out</Dropdown.Item>
+          <Dropdown.Item onClick={logout}>Выход</Dropdown.Item>
           <Dropdown.Item
             icon={<HelpOutlineIcon />}
             href="https://rsuitejs.com"
             target="_blank"
             as="a"
           >
-            Help{' '}
+            Справка{' '}
           </Dropdown.Item>
         </Dropdown.Menu>
       </Popover>
@@ -112,10 +112,10 @@ const Header = () => {
 
 const renderNoticeSpeaker = ({ onClose, left, top, className }: any, ref) => {
   const notifications = [
-    ['7 hours ago', 'You have new message.'],
-    ['13 hours ago', 'You have new message.'],
-    ['2 days ago', 'You have new notification.'],
-    ['3 days ago', 'John had commented on your post.']
+    ['7 часов назад', 'У вас есть новое сообщение.'],
+    ['13 часов назад', 'У вас есть новое сообщение.'],
+    ['2 дня назад', 'У вас есть новое уведомление.'],
+    ['3 дня назад', 'Кирилл Дмириевич Васильев прокомментировал ваш пост.']
   ];
 
   return (
@@ -135,7 +135,7 @@ const renderNoticeSpeaker = ({ onClose, left, top, className }: any, ref) => {
         })}
       </List>
       <div style={{ textAlign: 'center', marginTop: 20 }}>
-        <Button onClick={onClose}>More notifications</Button>
+        <Button onClick={onClose}>Больше уведомлений</Button>
       </div>
     </Popover>
   );
