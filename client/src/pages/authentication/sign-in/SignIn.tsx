@@ -32,7 +32,7 @@ const SignUp = () => {
         navigate(from, { replace: true });
       } 
     } catch (e) {
-      console.log(e);
+      alert("Не правильно ИД иил пароль");
       console.log('Login error!');
     }
   };
